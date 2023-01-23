@@ -1,21 +1,21 @@
 import { SideBar, GlobalStyle } from "../styled/sidebar";
-import { useTheme } from '@mui/material/styles';
 
 
 
 type RelSideBarProps={
   children?:any,
   open?:boolean,
-  SideBarContent?:any
+  SideBarContent?:any,
+  bgColor?:string
 }
 
-export const RelSideBar:React.FunctionComponent<RelSideBarProps> = ({ children ,open,SideBarContent}:RelSideBarProps) => {
-  const theme = useTheme();
+export const RelSideBar:React.FunctionComponent<RelSideBarProps> = ({ children ,bgColor,open,SideBarContent}:RelSideBarProps) => {
+
   return (
    <>
    
    <GlobalStyle />
-      <SideBar color={theme.palette.primary.dark} width={open ? 47 : 251} > {SideBarContent} </SideBar>
+      <SideBar color={bgColor} width={open ? 47 : 251} > {SideBarContent} </SideBar>
 
       {children}
    

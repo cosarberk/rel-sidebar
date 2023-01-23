@@ -15,7 +15,7 @@ export interface SidebarProviderProps {
 }
 
 export const RelSideBarPropvider:React.FunctionComponent<SidebarProviderProps>=({children})=>{
-  const [open, changeOpen] = useState<boolean>()
+  const [open, changeOpen] = useState<boolean>(true)
   return <ToggleSideContext.Provider value={{open,changeOpen}}>{children}</ToggleSideContext.Provider>;
     
   

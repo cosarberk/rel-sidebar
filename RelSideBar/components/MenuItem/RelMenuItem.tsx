@@ -164,7 +164,8 @@ export interface IMenuItemChildHome{
 const MenuItemChildHome = styled.div<IMenuItemChildHome>`
   width: ${(props) => (props.width ? props.width + "px" : "100%")};
   height: ${(props) => (props.height ? props.height + "px" : 0)};
-  overflow: hidden;
+  max-height:260px;
+  overflow: auto;
   margin-left: ${(props) => (props.sunMargin ? props.sunMargin + "px" : 0)};
   transition: 0.5s linear;
   background-color: ${(props) =>

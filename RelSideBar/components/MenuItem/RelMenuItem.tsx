@@ -164,8 +164,7 @@ export interface IMenuItemChildHome{
 const MenuItemChildHome = styled.div<IMenuItemChildHome>`
   width: ${(props) => (props.width ? props.width + "px" : "100%")};
   height: ${(props) => (props.height ? props.height + "px" : 0)};
-  max-height:260px;
-  overflow: auto;
+  overflow: hidden;
   margin-left: ${(props) => (props.sunMargin ? props.sunMargin + "px" : 0)};
   transition: 0.5s linear;
   background-color: ${(props) =>
@@ -350,7 +349,7 @@ export const RelHoverMenuItem:React.FunctionComponent<RelHoverMenuItemProps> = (
 
   const hoverIcon = (e:any) => {
     e.preventDefault();
-    console.log(e)
+    // console.log(e)
     const element = e.pageY; 
     const top = element.top;
     const w = e.target.getBoundingClientRect().width;
